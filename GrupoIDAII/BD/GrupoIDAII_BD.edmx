@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GrupoIDAIIModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClientesETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEmpresaE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="nomContactoE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefonoE" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="correoE" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ClientesIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nomEmpresa" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="nomContacto" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefono" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="correo" Type="nchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="CuentasPorCobrarETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noCotizacionE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="divisionE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="ordenCompraE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="cantidadE" Type="float" Nullable="false" />
+          <Property Name="cantidadIVAE" Type="float" Nullable="false" />
+          <Property Name="fechaEmisionE" Type="date" Nullable="false" />
+          <Property Name="diasCreditoE" Type="int" Nullable="false" />
+          <Property Name="diaEstimadoE" Type="date" Nullable="false" />
+          <Property Name="diaTransferenciaE" Type="date" Nullable="false" />
+          <Property Name="observacionesE" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="causaE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatusE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="mesE" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="bancoE" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_ClienteETM" Type="int" />
+        </EntityType>
+        <EntityType Name="CuentasPorCobrarIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="noCotizacion" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="division" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="ordenCompra" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="cantidad" Type="float" Nullable="false" />
+          <Property Name="cantidadIVA" Type="float" Nullable="false" />
+          <Property Name="fechaEmision" Type="date" Nullable="false" />
+          <Property Name="diasCredito" Type="int" Nullable="false" />
+          <Property Name="diaEstimado" Type="date" Nullable="false" />
+          <Property Name="diaTransferencia" Type="date" Nullable="false" />
+          <Property Name="observaciones" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="causa" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatus" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="mes" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="banco" Type="nchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_Cliente" Type="int" />
+        </EntityType>
+        <EntityType Name="MaterialesETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proveedorE" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="mesE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="subtotalE" Type="float" Nullable="false" />
+          <Property Name="ivaE" Type="float" Nullable="false" />
+          <Property Name="montoE" Type="float" Nullable="false" />
+          <Property Name="facturaE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_facE" Type="date" Nullable="false" />
+          <Property Name="dias_creditoE" Type="int" Nullable="false" />
+          <Property Name="fecha_limE" Type="date" Nullable="false" />
+          <Property Name="bancoE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatusE" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MaterialesIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proveedor" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="mes" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="subtotal" Type="float" Nullable="false" />
+          <Property Name="iva" Type="float" Nullable="false" />
+          <Property Name="monto" Type="float" Nullable="false" />
+          <Property Name="factura" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_fac" Type="date" Nullable="false" />
+          <Property Name="dias_credito" Type="int" Nullable="false" />
+          <Property Name="fecha_lim" Type="date" Nullable="false" />
+          <Property Name="banco" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatus" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiciosETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proveedorE" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="mesE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="subtotalE" Type="float" Nullable="false" />
+          <Property Name="ivaE" Type="float" Nullable="false" />
+          <Property Name="montoE" Type="float" Nullable="false" />
+          <Property Name="facturaE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_facE" Type="date" Nullable="false" />
+          <Property Name="dias_creditoE" Type="int" Nullable="false" />
+          <Property Name="fecha_limE" Type="date" Nullable="false" />
+          <Property Name="bancoE" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatusE" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiciosIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proveedor" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="mes" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="subtotal" Type="float" Nullable="false" />
+          <Property Name="iva" Type="float" Nullable="false" />
+          <Property Name="monto" Type="float" Nullable="false" />
+          <Property Name="factura" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_fac" Type="date" Nullable="false" />
+          <Property Name="dias_credito" Type="int" Nullable="false" />
+          <Property Name="fecha_lim" Type="date" Nullable="false" />
+          <Property Name="banco" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="estatus" Type="nchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nchar" MaxLength="150" />
+          <Property Name="correo" Type="nchar" MaxLength="150" />
+          <Property Name="alias" Type="nchar" MaxLength="10" />
+          <Property Name="contrasenia" Type="nchar" MaxLength="10" />
+          <Property Name="departamento" Type="nchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__CuentasPo__id_Cl__38996AB5">
+          <End Role="ClientesIDAII" Type="Self.ClientesIDAII" Multiplicity="0..1" />
+          <End Role="CuentasPorCobrarIDAII" Type="Self.CuentasPorCobrarIDAII" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesIDAII">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarIDAII">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentasPo__id_Cl__5CD6CB2B">
+          <End Role="ClientesIDAII" Type="Self.ClientesIDAII" Multiplicity="0..1" />
+          <End Role="CuentasPorCobrarIDAII" Type="Self.CuentasPorCobrarIDAII" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesIDAII">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarIDAII">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentasPo__id_Cl__71D1E811">
+          <End Role="ClientesETM" Type="Self.ClientesETM" Multiplicity="0..1" />
+          <End Role="CuentasPorCobrarETM" Type="Self.CuentasPorCobrarETM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesETM">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarETM">
+              <PropertyRef Name="id_ClienteETM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GrupoIDAIIModelStoreContainer">
+          <EntitySet Name="ClientesETM" EntityType="Self.ClientesETM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ClientesIDAII" EntityType="Self.ClientesIDAII" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuentasPorCobrarETM" EntityType="Self.CuentasPorCobrarETM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuentasPorCobrarIDAII" EntityType="Self.CuentasPorCobrarIDAII" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaterialesETM" EntityType="Self.MaterialesETM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MaterialesIDAII" EntityType="Self.MaterialesIDAII" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiciosETM" EntityType="Self.ServiciosETM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiciosIDAII" EntityType="Self.ServiciosIDAII" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuarios" EntityType="Self.Usuarios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CuentasPo__id_Cl__38996AB5" Association="Self.FK__CuentasPo__id_Cl__38996AB5">
+            <End Role="ClientesIDAII" EntitySet="ClientesIDAII" />
+            <End Role="CuentasPorCobrarIDAII" EntitySet="CuentasPorCobrarIDAII" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentasPo__id_Cl__5CD6CB2B" Association="Self.FK__CuentasPo__id_Cl__5CD6CB2B">
+            <End Role="ClientesIDAII" EntitySet="ClientesIDAII" />
+            <End Role="CuentasPorCobrarIDAII" EntitySet="CuentasPorCobrarIDAII" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentasPo__id_Cl__71D1E811" Association="Self.FK__CuentasPo__id_Cl__71D1E811">
+            <End Role="ClientesETM" EntitySet="ClientesETM" />
+            <End Role="CuentasPorCobrarETM" EntitySet="CuentasPorCobrarETM" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GrupoIDAIIModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityContainer Name="GrupoIDAIIEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Usuarios" EntityType="GrupoIDAIIModel.Usuarios" />
+          <EntitySet Name="ClientesIDAII" EntityType="GrupoIDAIIModel.ClientesIDAII" />
+          <EntitySet Name="CuentasPorCobrarIDAII" EntityType="GrupoIDAIIModel.CuentasPorCobrarIDAII" />
+          <EntitySet Name="MaterialesIDAII" EntityType="GrupoIDAIIModel.MaterialesIDAII" />
+          <EntitySet Name="ServiciosIDAII" EntityType="GrupoIDAIIModel.ServiciosIDAII" />
+          <AssociationSet Name="FK__CuentasPo__id_Cl__38996AB51" Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__38996AB51">
+            <End Role="ClientesIDAII" EntitySet="ClientesIDAII" />
+            <End Role="CuentasPorCobrarIDAII" EntitySet="CuentasPorCobrarIDAII" />
+          </AssociationSet>
+          <AssociationSet Name="FK__CuentasPo__id_Cl__5CD6CB2B1" Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__5CD6CB2B1">
+            <End Role="ClientesIDAII" EntitySet="ClientesIDAII" />
+            <End Role="CuentasPorCobrarIDAII" EntitySet="CuentasPorCobrarIDAII" />
+          </AssociationSet>
+          <EntitySet Name="ClientesETM" EntityType="GrupoIDAIIModel.ClientesETM" />
+          <EntitySet Name="CuentasPorCobrarETM" EntityType="GrupoIDAIIModel.CuentasPorCobrarETM" />
+          <EntitySet Name="MaterialesETM" EntityType="GrupoIDAIIModel.MaterialesETM" />
+          <EntitySet Name="ServiciosETM" EntityType="GrupoIDAIIModel.ServiciosETM" />
+          <AssociationSet Name="FK__CuentasPo__id_Cl__71D1E811" Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__71D1E811">
+            <End Role="ClientesETM" EntitySet="ClientesETM" />
+            <End Role="CuentasPorCobrarETM" EntitySet="CuentasPorCobrarETM" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Usuarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="correo" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="contrasenia" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="departamento" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ClientesIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEmpresa" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="nomContacto" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="correo" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="CuentasPorCobrarIDAII" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__38996AB51" FromRole="ClientesIDAII" ToRole="CuentasPorCobrarIDAII" />
+          <NavigationProperty Name="CuentasPorCobrarIDAII1" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__5CD6CB2B1" FromRole="ClientesIDAII" ToRole="CuentasPorCobrarIDAII" />
+        </EntityType>
+        <EntityType Name="CuentasPorCobrarIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noCotizacion" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="division" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="ordenCompra" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="cantidad" Type="Double" Nullable="false" />
+          <Property Name="cantidadIVA" Type="Double" Nullable="false" />
+          <Property Name="fechaEmision" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="diasCredito" Type="Int32" Nullable="false" />
+          <Property Name="diaEstimado" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="diaTransferencia" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="observaciones" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="causa" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="mes" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="banco" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="id_Cliente" Type="Int32" />
+          <NavigationProperty Name="ClientesIDAII" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__38996AB51" FromRole="CuentasPorCobrarIDAII" ToRole="ClientesIDAII" />
+          <NavigationProperty Name="ClientesIDAII1" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__5CD6CB2B1" FromRole="CuentasPorCobrarIDAII" ToRole="ClientesIDAII" />
+        </EntityType>
+        <EntityType Name="MaterialesIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proveedor" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mes" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="subtotal" Type="Double" Nullable="false" />
+          <Property Name="iva" Type="Double" Nullable="false" />
+          <Property Name="monto" Type="Double" Nullable="false" />
+          <Property Name="factura" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_fac" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dias_credito" Type="Int32" Nullable="false" />
+          <Property Name="fecha_lim" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="banco" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServiciosIDAII">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proveedor" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mes" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="subtotal" Type="Double" Nullable="false" />
+          <Property Name="iva" Type="Double" Nullable="false" />
+          <Property Name="monto" Type="Double" Nullable="false" />
+          <Property Name="factura" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_fac" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dias_credito" Type="Int32" Nullable="false" />
+          <Property Name="fecha_lim" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="banco" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatus" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__CuentasPo__id_Cl__38996AB51">
+          <End Type="GrupoIDAIIModel.ClientesIDAII" Role="ClientesIDAII" Multiplicity="0..1" />
+          <End Type="GrupoIDAIIModel.CuentasPorCobrarIDAII" Role="CuentasPorCobrarIDAII" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesIDAII">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarIDAII">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__CuentasPo__id_Cl__5CD6CB2B1">
+          <End Type="GrupoIDAIIModel.ClientesIDAII" Role="ClientesIDAII" Multiplicity="0..1" />
+          <End Type="GrupoIDAIIModel.CuentasPorCobrarIDAII" Role="CuentasPorCobrarIDAII" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesIDAII">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarIDAII">
+              <PropertyRef Name="id_Cliente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ClientesETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nomEmpresaE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="nomContactoE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="telefonoE" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="correoE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="CuentasPorCobrarETM" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__71D1E811" FromRole="ClientesETM" ToRole="CuentasPorCobrarETM" />
+        </EntityType>
+        <EntityType Name="CuentasPorCobrarETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="noCotizacionE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="divisionE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="ordenCompraE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="cantidadE" Type="Double" Nullable="false" />
+          <Property Name="cantidadIVAE" Type="Double" Nullable="false" />
+          <Property Name="fechaEmisionE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="diasCreditoE" Type="Int32" Nullable="false" />
+          <Property Name="diaEstimadoE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="diaTransferenciaE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="observacionesE" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="causaE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatusE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="mesE" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="bancoE" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+          <Property Name="id_ClienteETM" Type="Int32" />
+          <NavigationProperty Name="ClientesETM" Relationship="GrupoIDAIIModel.FK__CuentasPo__id_Cl__71D1E811" FromRole="CuentasPorCobrarETM" ToRole="ClientesETM" />
+        </EntityType>
+        <EntityType Name="MaterialesETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proveedorE" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mesE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="subtotalE" Type="Double" Nullable="false" />
+          <Property Name="ivaE" Type="Double" Nullable="false" />
+          <Property Name="montoE" Type="Double" Nullable="false" />
+          <Property Name="facturaE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_facE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dias_creditoE" Type="Int32" Nullable="false" />
+          <Property Name="fecha_limE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="bancoE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatusE" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ServiciosETM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proveedorE" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="mesE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="subtotalE" Type="Double" Nullable="false" />
+          <Property Name="ivaE" Type="Double" Nullable="false" />
+          <Property Name="montoE" Type="Double" Nullable="false" />
+          <Property Name="facturaE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="fecha_facE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="dias_creditoE" Type="Int32" Nullable="false" />
+          <Property Name="fecha_limE" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="bancoE" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="estatusE" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <Association Name="FK__CuentasPo__id_Cl__71D1E811">
+          <End Type="GrupoIDAIIModel.ClientesETM" Role="ClientesETM" Multiplicity="0..1" />
+          <End Type="GrupoIDAIIModel.CuentasPorCobrarETM" Role="CuentasPorCobrarETM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClientesETM">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="CuentasPorCobrarETM">
+              <PropertyRef Name="id_ClienteETM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GrupoIDAIIModelStoreContainer" CdmEntityContainer="GrupoIDAIIEntities1">
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuarios">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.Usuarios">
+              <MappingFragment StoreEntitySet="Usuarios">
+                <ScalarProperty Name="departamento" ColumnName="departamento" />
+                <ScalarProperty Name="contrasenia" ColumnName="contrasenia" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientesIDAII">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.ClientesIDAII">
+              <MappingFragment StoreEntitySet="ClientesIDAII">
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="nomContacto" ColumnName="nomContacto" />
+                <ScalarProperty Name="nomEmpresa" ColumnName="nomEmpresa" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuentasPorCobrarIDAII">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.CuentasPorCobrarIDAII">
+              <MappingFragment StoreEntitySet="CuentasPorCobrarIDAII">
+                <ScalarProperty Name="id_Cliente" ColumnName="id_Cliente" />
+                <ScalarProperty Name="banco" ColumnName="banco" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="causa" ColumnName="causa" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="diaTransferencia" ColumnName="diaTransferencia" />
+                <ScalarProperty Name="diaEstimado" ColumnName="diaEstimado" />
+                <ScalarProperty Name="diasCredito" ColumnName="diasCredito" />
+                <ScalarProperty Name="fechaEmision" ColumnName="fechaEmision" />
+                <ScalarProperty Name="cantidadIVA" ColumnName="cantidadIVA" />
+                <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+                <ScalarProperty Name="ordenCompra" ColumnName="ordenCompra" />
+                <ScalarProperty Name="division" ColumnName="division" />
+                <ScalarProperty Name="noCotizacion" ColumnName="noCotizacion" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialesIDAII">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.MaterialesIDAII">
+              <MappingFragment StoreEntitySet="MaterialesIDAII">
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="banco" ColumnName="banco" />
+                <ScalarProperty Name="fecha_lim" ColumnName="fecha_lim" />
+                <ScalarProperty Name="dias_credito" ColumnName="dias_credito" />
+                <ScalarProperty Name="fecha_fac" ColumnName="fecha_fac" />
+                <ScalarProperty Name="factura" ColumnName="factura" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="iva" ColumnName="iva" />
+                <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiciosIDAII">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.ServiciosIDAII">
+              <MappingFragment StoreEntitySet="ServiciosIDAII">
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="banco" ColumnName="banco" />
+                <ScalarProperty Name="fecha_lim" ColumnName="fecha_lim" />
+                <ScalarProperty Name="dias_credito" ColumnName="dias_credito" />
+                <ScalarProperty Name="fecha_fac" ColumnName="fecha_fac" />
+                <ScalarProperty Name="factura" ColumnName="factura" />
+                <ScalarProperty Name="monto" ColumnName="monto" />
+                <ScalarProperty Name="iva" ColumnName="iva" />
+                <ScalarProperty Name="subtotal" ColumnName="subtotal" />
+                <ScalarProperty Name="mes" ColumnName="mes" />
+                <ScalarProperty Name="proveedor" ColumnName="proveedor" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ClientesETM">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.ClientesETM">
+              <MappingFragment StoreEntitySet="ClientesETM">
+                <ScalarProperty Name="correoE" ColumnName="correoE" />
+                <ScalarProperty Name="telefonoE" ColumnName="telefonoE" />
+                <ScalarProperty Name="nomContactoE" ColumnName="nomContactoE" />
+                <ScalarProperty Name="nomEmpresaE" ColumnName="nomEmpresaE" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuentasPorCobrarETM">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.CuentasPorCobrarETM">
+              <MappingFragment StoreEntitySet="CuentasPorCobrarETM">
+                <ScalarProperty Name="id_ClienteETM" ColumnName="id_ClienteETM" />
+                <ScalarProperty Name="bancoE" ColumnName="bancoE" />
+                <ScalarProperty Name="mesE" ColumnName="mesE" />
+                <ScalarProperty Name="estatusE" ColumnName="estatusE" />
+                <ScalarProperty Name="causaE" ColumnName="causaE" />
+                <ScalarProperty Name="observacionesE" ColumnName="observacionesE" />
+                <ScalarProperty Name="diaTransferenciaE" ColumnName="diaTransferenciaE" />
+                <ScalarProperty Name="diaEstimadoE" ColumnName="diaEstimadoE" />
+                <ScalarProperty Name="diasCreditoE" ColumnName="diasCreditoE" />
+                <ScalarProperty Name="fechaEmisionE" ColumnName="fechaEmisionE" />
+                <ScalarProperty Name="cantidadIVAE" ColumnName="cantidadIVAE" />
+                <ScalarProperty Name="cantidadE" ColumnName="cantidadE" />
+                <ScalarProperty Name="ordenCompraE" ColumnName="ordenCompraE" />
+                <ScalarProperty Name="divisionE" ColumnName="divisionE" />
+                <ScalarProperty Name="noCotizacionE" ColumnName="noCotizacionE" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialesETM">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.MaterialesETM">
+              <MappingFragment StoreEntitySet="MaterialesETM">
+                <ScalarProperty Name="estatusE" ColumnName="estatusE" />
+                <ScalarProperty Name="bancoE" ColumnName="bancoE" />
+                <ScalarProperty Name="fecha_limE" ColumnName="fecha_limE" />
+                <ScalarProperty Name="dias_creditoE" ColumnName="dias_creditoE" />
+                <ScalarProperty Name="fecha_facE" ColumnName="fecha_facE" />
+                <ScalarProperty Name="facturaE" ColumnName="facturaE" />
+                <ScalarProperty Name="montoE" ColumnName="montoE" />
+                <ScalarProperty Name="ivaE" ColumnName="ivaE" />
+                <ScalarProperty Name="subtotalE" ColumnName="subtotalE" />
+                <ScalarProperty Name="mesE" ColumnName="mesE" />
+                <ScalarProperty Name="proveedorE" ColumnName="proveedorE" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiciosETM">
+            <EntityTypeMapping TypeName="GrupoIDAIIModel.ServiciosETM">
+              <MappingFragment StoreEntitySet="ServiciosETM">
+                <ScalarProperty Name="estatusE" ColumnName="estatusE" />
+                <ScalarProperty Name="bancoE" ColumnName="bancoE" />
+                <ScalarProperty Name="fecha_limE" ColumnName="fecha_limE" />
+                <ScalarProperty Name="dias_creditoE" ColumnName="dias_creditoE" />
+                <ScalarProperty Name="fecha_facE" ColumnName="fecha_facE" />
+                <ScalarProperty Name="facturaE" ColumnName="facturaE" />
+                <ScalarProperty Name="montoE" ColumnName="montoE" />
+                <ScalarProperty Name="ivaE" ColumnName="ivaE" />
+                <ScalarProperty Name="subtotalE" ColumnName="subtotalE" />
+                <ScalarProperty Name="mesE" ColumnName="mesE" />
+                <ScalarProperty Name="proveedorE" ColumnName="proveedorE" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

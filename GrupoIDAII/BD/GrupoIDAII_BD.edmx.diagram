@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b5fd2e9e514c403c875b8963ade012fe" Name="Diagram1">
+        <EntityTypeShape EntityType="GrupoIDAIIModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.Usuarios" Width="1.5" PointX="8.375" PointY="0.75" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.ClientesIDAII" Width="1.5" PointX="8.75" PointY="5.125" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.CuentasPorCobrarIDAII" Width="1.5" PointX="11" PointY="4" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.MaterialesIDAII" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.ServiciosIDAII" Width="1.5" PointX="4.375" PointY="7.375" />
+        <AssociationConnector Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__38996AB51" />
+        <AssociationConnector Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__5CD6CB2B1" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.ClientesETM" Width="1.5" PointX="0.75" PointY="2.125" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.CuentasPorCobrarETM" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.MaterialesETM" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="GrupoIDAIIModel.ServiciosETM" Width="1.5" PointX="6.75" PointY="8.75" />
+        <AssociationConnector Association="GrupoIDAIIModel.FK__CuentasPo__id_Cl__71D1E811" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
